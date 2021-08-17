@@ -1,19 +1,12 @@
 const Token = artifacts.require('MyToken');
 
-var chai = require('chai');
-const BN = web3.utils.BN;
-const chaiBN = require('chai-bn')(BN);
-chai.use(chaiBN);
-
-var chaiAsPromised = require('chai-as-promised');
-chai.use(chaiAsPromised);
-
-const expect = chai.expect;
+const { BN, expect } = require('./testSetup');
 
 contract('Token Test', async (accounts) => {
     const [deployerAccount, recipient, anotherAccount] = accounts;
 
     beforeEach(async () => {
+        console.log('.env', process.env.INITIAL_TOKENS);
         this.myToken = await Token.new(process.env.INITIAL_TOKENS);
     });
 

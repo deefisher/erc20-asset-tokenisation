@@ -17,8 +17,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -31,8 +30,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -1733,8 +1731,7 @@
     }
   },
   "schemaVersion": "3.4.2",
-  "updatedAt": "2021-08-17T11:41:55.318Z",
-  "networkType": "ethereum",
+  "updatedAt": "2021-08-17T12:20:52.450Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
