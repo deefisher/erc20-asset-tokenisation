@@ -1,5 +1,10 @@
-const MyToken = artifacts.require('MyToken.sol');
+const MyToken = artifacts.require('./MyToken.sol');
+const MyTokenSale = artifacts.require('./MyTokenSale.sol');
 
 module.exports = async function (deployer) {
-    await deployer.deploy(MyToken, 1000000);
+    let addr = await web3.eth.getAccounts();
+    await deployer.deploy(MyToken, 1000000); //deploy the token contract
+    await deployer.deploy(MyTokenSale, 1, addr[0], MyToken.address); //deploy Token sale contract that will receive the tokens
+    let instance = await MyToken.deployed();
+    await instance.transfer(MyTokenSale.address, 1000000);
 };
