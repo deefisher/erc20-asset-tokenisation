@@ -1,10 +1,17 @@
+const result = require('dotenv').config();
+
+if (result.error) {
+  throw result.error
+}
+
+console.log(result.parsed)
 const path = require('path');
-const dotenv = require('dotenv');
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const Mnemonic = '';
 const AccountIndex = 0;
 
 console.log('mnemonic', process.env.MNEMONIC);
+console.log('INITIAL_TOKENS', process.env.INITIAL_TOKENS);
 
 module.exports = {
     // See <http://truffleframework.com/docs/advanced/configuration>
