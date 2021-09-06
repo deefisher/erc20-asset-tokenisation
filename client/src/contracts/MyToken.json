@@ -8651,12 +8651,12 @@
         }
       },
       "links": {},
-      "address": "0x6eC05cF9DFE7d48283ab29Dac2c6734cC6fa7E9B",
-      "transactionHash": "0xcb6bbbf809f5134b2e7aec81e87d0356832fa89494dd5a01fcf1fcfd80a51d6a"
+      "address": "0x2F092a43Ac3E086dbCE6d3dd650fCCD2FF04D66a",
+      "transactionHash": "0x48317bf2a73b7904013ff94d14982f55feb2938f4798b93276045fd8594b3d1c"
     }
   },
   "schemaVersion": "3.4.2",
-  "updatedAt": "2021-08-27T11:46:20.525Z",
+  "updatedAt": "2021-09-06T12:12:24.894Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
