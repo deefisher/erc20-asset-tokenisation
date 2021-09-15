@@ -44,8 +44,8 @@ module.exports = {
                 );
             },
             network_id: 3,
-            networkCheckTimeout: 1000000,
-            timeoutBlocks: 2000
+            networkCheckTimeout: 10000000,
+            timeoutBlocks: 20000
         },
     },
     compilers: {
