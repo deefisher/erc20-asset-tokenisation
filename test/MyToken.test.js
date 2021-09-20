@@ -3,11 +3,11 @@ const Token = artifacts.require('MyToken');
 const { BN, expect } = require('./testSetup');
 
 contract('Token Test', async (accounts) => {
-    const [deployerAccount, recipient, anotherAccount] = accounts;
+    const [deployerAccount, recipient] = accounts;
 
     beforeEach(async () => {
-        console.log('.env', process.env.INITIAL_TOKENS);
         this.myToken = await Token.new(process.env.INITIAL_TOKENS);
+        await web3.eth.getBalance(deployerAccount).then(console.log);
     });
 
     //eventually property is needed to allow for promises to resolve
@@ -23,6 +23,7 @@ contract('Token Test', async (accounts) => {
         let totalSupply = await instance.totalSupply();
         await expect(instance.balanceOf(deployerAccount)).to.eventually.be.a.bignumber.equal(totalSupply);
         //fulfilled property means promise gets fulfilled (as opposed to rejected)
+        //is erc20 instance therefore can use balanceOf method
         await expect(instance.transfer(recipient, sendTokens)).to.eventually.be.fulfilled;
         await expect(instance.balanceOf(deployerAccount)).to.eventually.be.a.bignumber.equal(
             totalSupply.sub(new BN(sendTokens)),
