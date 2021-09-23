@@ -1,0 +1,1794 @@
+{
+  "contractName": "MyUpgradeableContract",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "token",
+      "outputs": [
+        {
+          "internalType": "contract IERC20Upgradeable",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20Upgradeable",
+          "name": "_token",
+          "type": "address"
+        }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract IERC20Upgradeable\",\"name\":\"_token\",\"type\":\"address\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token\",\"outputs\":[{\"internalType\":\"contract IERC20Upgradeable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/MyUpgradeableContract.sol\":\"MyUpgradeableContract\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol\":{\"keccak256\":\"0x8b2abd85d0ece7e866e100e9d47ca9cbec93c87cf71a8d267b2b93eb81f7d5e9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fe9fa1beb63e4a09637701f783982ba80380d630d600c9cafe26b68bf58be1b2\",\"dweb:/ipfs/QmRA3GXhTWys88joD9x8xYhdjzvGwmDGLMMzGw3LxbSEge\"]},\"@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol\":{\"keccak256\":\"0xf449ca0a763d4b1b4462cf8706857074492f324020a2b9d099181b5383055ad3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c5ec4671e17a3a805bc75e989180616001f5fad2043da849e9e8c1dae2805ed3\",\"dweb:/ipfs/QmeVryqLgUYRDJhFgv957unYkEg8pqNENsUZnmvm176Fno\"]},\"project:/contracts/MyUpgradeableContract.sol\":{\"keccak256\":\"0x79a34ed9a63274a6bae954ac1c59fd681a36184f607afc303ae7f3b1e74475b4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3049d0ec48dd77bc76455478e6ac5eaced533899d1d75d185e3a8a42ec337c26\",\"dweb:/ipfs/QmcFCk7aYaE8SQXgqUPX9DGb9PSyigrvrEZRj9aGYe3XqD\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061036a806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c8063c4d66de81461003b578063fc0c546a14610057575b600080fd5b610055600480360381019061005091906101cb565b610075565b005b61005f610190565b60405161006c9190610269565b60405180910390f35b600060019054906101000a900460ff168061009b575060008054906101000a900460ff16155b6100da576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016100d190610284565b60405180910390fd5b60008060019054906101000a900460ff16159050801561012a576001600060016101000a81548160ff02191690831515021790555060016000806101000a81548160ff0219169083151502179055505b81600060026101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550801561018c5760008060016101000a81548160ff0219169083151502179055505b5050565b600060029054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000813590506101c58161031d565b92915050565b6000602082840312156101dd57600080fd5b60006101eb848285016101b6565b91505092915050565b6101fd816102f9565b82525050565b6000610210602e836102a4565b91507f496e697469616c697a61626c653a20636f6e747261637420697320616c72656160008301527f647920696e697469616c697a65640000000000000000000000000000000000006020830152604082019050919050565b600060208201905061027e60008301846101f4565b92915050565b6000602082019050818103600083015261029d81610203565b9050919050565b600082825260208201905092915050565b60006102c0826102d9565b9050919050565b60006102d2826102b5565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b60006103048261030b565b9050919050565b6000610316826102d9565b9050919050565b610326816102c7565b811461033157600080fd5b5056fea2646970667358221220c43b9967b56fe41992cb687e54759b1cf307bc88b74562c258fdb94da30b623264736f6c63430008000033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c8063c4d66de81461003b578063fc0c546a14610057575b600080fd5b610055600480360381019061005091906101cb565b610075565b005b61005f610190565b60405161006c9190610269565b60405180910390f35b600060019054906101000a900460ff168061009b575060008054906101000a900460ff16155b6100da576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016100d190610284565b60405180910390fd5b60008060019054906101000a900460ff16159050801561012a576001600060016101000a81548160ff02191690831515021790555060016000806101000a81548160ff0219169083151502179055505b81600060026101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550801561018c5760008060016101000a81548160ff0219169083151502179055505b5050565b600060029054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000813590506101c58161031d565b92915050565b6000602082840312156101dd57600080fd5b60006101eb848285016101b6565b91505092915050565b6101fd816102f9565b82525050565b6000610210602e836102a4565b91507f496e697469616c697a61626c653a20636f6e747261637420697320616c72656160008301527f647920696e697469616c697a65640000000000000000000000000000000000006020830152604082019050919050565b600060208201905061027e60008301846101f4565b92915050565b6000602082019050818103600083015261029d81610203565b9050919050565b600082825260208201905092915050565b60006102c0826102d9565b9050919050565b60006102d2826102b5565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b60006103048261030b565b9050919050565b6000610316826102d9565b9050919050565b610326816102c7565b811461033157600080fd5b5056fea2646970667358221220c43b9967b56fe41992cb687e54759b1cf307bc88b74562c258fdb94da30b623264736f6c63430008000033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [
+    {
+      "ast": {
+        "nodeType": "YulBlock",
+        "src": "0:2831:24",
+        "statements": [
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "84:112:24",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "94:29:24",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "offset",
+                        "nodeType": "YulIdentifier",
+                        "src": "116:6:24"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "calldataload",
+                      "nodeType": "YulIdentifier",
+                      "src": "103:12:24"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "103:20:24"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "value",
+                      "nodeType": "YulIdentifier",
+                      "src": "94:5:24"
+                    }
+                  ]
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "value",
+                        "nodeType": "YulIdentifier",
+                        "src": "184:5:24"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "validator_revert_t_contract$_IERC20Upgradeable_$696",
+                      "nodeType": "YulIdentifier",
+                      "src": "132:51:24"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "132:58:24"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "132:58:24"
+                }
+              ]
+            },
+            "name": "abi_decode_t_contract$_IERC20Upgradeable_$696",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "offset",
+                "nodeType": "YulTypedName",
+                "src": "62:6:24",
+                "type": ""
+              },
+              {
+                "name": "end",
+                "nodeType": "YulTypedName",
+                "src": "70:3:24",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "78:5:24",
+                "type": ""
+              }
+            ],
+            "src": "7:189:24"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "293:221:24",
+              "statements": [
+                {
+                  "body": {
+                    "nodeType": "YulBlock",
+                    "src": "339:16:24",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "kind": "number",
+                              "nodeType": "YulLiteral",
+                              "src": "348:1:24",
+                              "type": "",
+                              "value": "0"
+                            },
+                            {
+                              "kind": "number",
+                              "nodeType": "YulLiteral",
+                              "src": "351:1:24",
+                              "type": "",
+                              "value": "0"
+                            }
+                          ],
+                          "functionName": {
+                            "name": "revert",
+                            "nodeType": "YulIdentifier",
+                            "src": "341:6:24"
+                          },
+                          "nodeType": "YulFunctionCall",
+                          "src": "341:12:24"
+                        },
+                        "nodeType": "YulExpressionStatement",
+                        "src": "341:12:24"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "name": "dataEnd",
+                            "nodeType": "YulIdentifier",
+                            "src": "314:7:24"
+                          },
+                          {
+                            "name": "headStart",
+                            "nodeType": "YulIdentifier",
+                            "src": "323:9:24"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "sub",
+                          "nodeType": "YulIdentifier",
+                          "src": "310:3:24"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "310:23:24"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "335:2:24",
+                        "type": "",
+                        "value": "32"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "slt",
+                      "nodeType": "YulIdentifier",
+                      "src": "306:3:24"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "306:32:24"
+                  },
+                  "nodeType": "YulIf",
+                  "src": "303:2:24"
+                },
+                {
+                  "nodeType": "YulBlock",
+                  "src": "365:142:24",
+                  "statements": [
+                    {
+                      "nodeType": "YulVariableDeclaration",
+                      "src": "380:15:24",
+                      "value": {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "394:1:24",
+                        "type": "",
+                        "value": "0"
+                      },
+                      "variables": [
+                        {
+                          "name": "offset",
+                          "nodeType": "YulTypedName",
+                          "src": "384:6:24",
+                          "type": ""
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "YulAssignment",
+                      "src": "409:88:24",
+                      "value": {
+                        "arguments": [
+                          {
+                            "arguments": [
+                              {
+                                "name": "headStart",
+                                "nodeType": "YulIdentifier",
+                                "src": "469:9:24"
+                              },
+                              {
+                                "name": "offset",
+                                "nodeType": "YulIdentifier",
+                                "src": "480:6:24"
+                              }
+                            ],
+                            "functionName": {
+                              "name": "add",
+                              "nodeType": "YulIdentifier",
+                              "src": "465:3:24"
+                            },
+                            "nodeType": "YulFunctionCall",
+                            "src": "465:22:24"
+                          },
+                          {
+                            "name": "dataEnd",
+                            "nodeType": "YulIdentifier",
+                            "src": "489:7:24"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "abi_decode_t_contract$_IERC20Upgradeable_$696",
+                          "nodeType": "YulIdentifier",
+                          "src": "419:45:24"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "419:78:24"
+                      },
+                      "variableNames": [
+                        {
+                          "name": "value0",
+                          "nodeType": "YulIdentifier",
+                          "src": "409:6:24"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "abi_decode_tuple_t_contract$_IERC20Upgradeable_$696",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "headStart",
+                "nodeType": "YulTypedName",
+                "src": "263:9:24",
+                "type": ""
+              },
+              {
+                "name": "dataEnd",
+                "nodeType": "YulTypedName",
+                "src": "274:7:24",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "value0",
+                "nodeType": "YulTypedName",
+                "src": "286:6:24",
+                "type": ""
+              }
+            ],
+            "src": "202:312:24"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "610:91:24",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "pos",
+                        "nodeType": "YulIdentifier",
+                        "src": "627:3:24"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "name": "value",
+                            "nodeType": "YulIdentifier",
+                            "src": "688:5:24"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "convert_t_contract$_IERC20Upgradeable_$696_to_t_address",
+                          "nodeType": "YulIdentifier",
+                          "src": "632:55:24"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "632:62:24"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "mstore",
+                      "nodeType": "YulIdentifier",
+                      "src": "620:6:24"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "620:75:24"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "620:75:24"
+                }
+              ]
+            },
+            "name": "abi_encode_t_contract$_IERC20Upgradeable_$696_to_t_address_fromStack",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "598:5:24",
+                "type": ""
+              },
+              {
+                "name": "pos",
+                "nodeType": "YulTypedName",
+                "src": "605:3:24",
+                "type": ""
+              }
+            ],
+            "src": "520:181:24"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "853:232:24",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "863:74:24",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "pos",
+                        "nodeType": "YulIdentifier",
+                        "src": "929:3:24"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "934:2:24",
+                        "type": "",
+                        "value": "46"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "array_storeLengthForEncoding_t_string_memory_ptr_fromStack",
+                      "nodeType": "YulIdentifier",
+                      "src": "870:58:24"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "870:67:24"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "pos",
+                      "nodeType": "YulIdentifier",
+                      "src": "863:3:24"
+                    }
+                  ]
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "name": "pos",
+                            "nodeType": "YulIdentifier",
+                            "src": "958:3:24"
+                          },
+                          {
+                            "kind": "number",
+                            "nodeType": "YulLiteral",
+                            "src": "963:1:24",
+                            "type": "",
+                            "value": "0"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "add",
+                          "nodeType": "YulIdentifier",
+                          "src": "954:3:24"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "954:11:24"
+                      },
+                      {
+                        "kind": "string",
+                        "nodeType": "YulLiteral",
+                        "src": "967:34:24",
+                        "type": "",
+                        "value": "Initializable: contract is alrea"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "mstore",
+                      "nodeType": "YulIdentifier",
+                      "src": "947:6:24"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "947:55:24"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "947:55:24"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "name": "pos",
+                            "nodeType": "YulIdentifier",
+                            "src": "1023:3:24"
+                          },
+                          {
+                            "kind": "number",
+                            "nodeType": "YulLiteral",
+                            "src": "1028:2:24",
+                            "type": "",
+                            "value": "32"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "add",
+                          "nodeType": "YulIdentifier",
+                          "src": "1019:3:24"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "1019:12:24"
+                      },
+                      {
+                        "kind": "string",
+                        "nodeType": "YulLiteral",
+                        "src": "1033:16:24",
+                        "type": "",
+                        "value": "dy initialized"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "mstore",
+                      "nodeType": "YulIdentifier",
+                      "src": "1012:6:24"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "1012:38:24"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "1012:38:24"
+                },
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "1060:19:24",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "pos",
+                        "nodeType": "YulIdentifier",
+                        "src": "1071:3:24"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "1076:2:24",
+                        "type": "",
+                        "value": "64"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "add",
+                      "nodeType": "YulIdentifier",
+                      "src": "1067:3:24"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "1067:12:24"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "end",
+                      "nodeType": "YulIdentifier",
+                      "src": "1060:3:24"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "abi_encode_t_stringliteral_7a2a4e26842155ea933fe6eb6e3137eb5a296dcdf55721c552be7b4c3cc23759_to_t_string_memory_ptr_fromStack",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "pos",
+                "nodeType": "YulTypedName",
+                "src": "841:3:24",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "end",
+                "nodeType": "YulTypedName",
+                "src": "849:3:24",
+                "type": ""
+              }
+            ],
+            "src": "707:378:24"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "1214:149:24",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "1224:26:24",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "headStart",
+                        "nodeType": "YulIdentifier",
+                        "src": "1236:9:24"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "1247:2:24",
+                        "type": "",
+                        "value": "32"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "add",
+                      "nodeType": "YulIdentifier",
+                      "src": "1232:3:24"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "1232:18:24"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "tail",
+                      "nodeType": "YulIdentifier",
+                      "src": "1224:4:24"
+                    }
+                  ]
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "value0",
+                        "nodeType": "YulIdentifier",
+                        "src": "1329:6:24"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "name": "headStart",
+                            "nodeType": "YulIdentifier",
+                            "src": "1342:9:24"
+                          },
+                          {
+                            "kind": "number",
+                            "nodeType": "YulLiteral",
+                            "src": "1353:1:24",
+                            "type": "",
+                            "value": "0"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "add",
+                          "nodeType": "YulIdentifier",
+                          "src": "1338:3:24"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "1338:17:24"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "abi_encode_t_contract$_IERC20Upgradeable_$696_to_t_address_fromStack",
+                      "nodeType": "YulIdentifier",
+                      "src": "1260:68:24"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "1260:96:24"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "1260:96:24"
+                }
+              ]
+            },
+            "name": "abi_encode_tuple_t_contract$_IERC20Upgradeable_$696__to_t_address__fromStack_reversed",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "headStart",
+                "nodeType": "YulTypedName",
+                "src": "1186:9:24",
+                "type": ""
+              },
+              {
+                "name": "value0",
+                "nodeType": "YulTypedName",
+                "src": "1198:6:24",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "tail",
+                "nodeType": "YulTypedName",
+                "src": "1209:4:24",
+                "type": ""
+              }
+            ],
+            "src": "1091:272:24"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "1540:248:24",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "1550:26:24",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "headStart",
+                        "nodeType": "YulIdentifier",
+                        "src": "1562:9:24"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "1573:2:24",
+                        "type": "",
+                        "value": "32"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "add",
+                      "nodeType": "YulIdentifier",
+                      "src": "1558:3:24"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "1558:18:24"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "tail",
+                      "nodeType": "YulIdentifier",
+                      "src": "1550:4:24"
+                    }
+                  ]
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "name": "headStart",
+                            "nodeType": "YulIdentifier",
+                            "src": "1597:9:24"
+                          },
+                          {
+                            "kind": "number",
+                            "nodeType": "YulLiteral",
+                            "src": "1608:1:24",
+                            "type": "",
+                            "value": "0"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "add",
+                          "nodeType": "YulIdentifier",
+                          "src": "1593:3:24"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "1593:17:24"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "name": "tail",
+                            "nodeType": "YulIdentifier",
+                            "src": "1616:4:24"
+                          },
+                          {
+                            "name": "headStart",
+                            "nodeType": "YulIdentifier",
+                            "src": "1622:9:24"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "sub",
+                          "nodeType": "YulIdentifier",
+                          "src": "1612:3:24"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "1612:20:24"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "mstore",
+                      "nodeType": "YulIdentifier",
+                      "src": "1586:6:24"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "1586:47:24"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "1586:47:24"
+                },
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "1642:139:24",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "tail",
+                        "nodeType": "YulIdentifier",
+                        "src": "1776:4:24"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "abi_encode_t_stringliteral_7a2a4e26842155ea933fe6eb6e3137eb5a296dcdf55721c552be7b4c3cc23759_to_t_string_memory_ptr_fromStack",
+                      "nodeType": "YulIdentifier",
+                      "src": "1650:124:24"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "1650:131:24"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "tail",
+                      "nodeType": "YulIdentifier",
+                      "src": "1642:4:24"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "abi_encode_tuple_t_stringliteral_7a2a4e26842155ea933fe6eb6e3137eb5a296dcdf55721c552be7b4c3cc23759__to_t_string_memory_ptr__fromStack_reversed",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "headStart",
+                "nodeType": "YulTypedName",
+                "src": "1520:9:24",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "tail",
+                "nodeType": "YulTypedName",
+                "src": "1535:4:24",
+                "type": ""
+              }
+            ],
+            "src": "1369:419:24"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "1890:73:24",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "pos",
+                        "nodeType": "YulIdentifier",
+                        "src": "1907:3:24"
+                      },
+                      {
+                        "name": "length",
+                        "nodeType": "YulIdentifier",
+                        "src": "1912:6:24"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "mstore",
+                      "nodeType": "YulIdentifier",
+                      "src": "1900:6:24"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "1900:19:24"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "1900:19:24"
+                },
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "1928:29:24",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "pos",
+                        "nodeType": "YulIdentifier",
+                        "src": "1947:3:24"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "1952:4:24",
+                        "type": "",
+                        "value": "0x20"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "add",
+                      "nodeType": "YulIdentifier",
+                      "src": "1943:3:24"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "1943:14:24"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "updated_pos",
+                      "nodeType": "YulIdentifier",
+                      "src": "1928:11:24"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "array_storeLengthForEncoding_t_string_memory_ptr_fromStack",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "pos",
+                "nodeType": "YulTypedName",
+                "src": "1862:3:24",
+                "type": ""
+              },
+              {
+                "name": "length",
+                "nodeType": "YulTypedName",
+                "src": "1867:6:24",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "updated_pos",
+                "nodeType": "YulTypedName",
+                "src": "1878:11:24",
+                "type": ""
+              }
+            ],
+            "src": "1794:169:24"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "2014:51:24",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "2024:35:24",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "value",
+                        "nodeType": "YulIdentifier",
+                        "src": "2053:5:24"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "cleanup_t_uint160",
+                      "nodeType": "YulIdentifier",
+                      "src": "2035:17:24"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "2035:24:24"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "cleaned",
+                      "nodeType": "YulIdentifier",
+                      "src": "2024:7:24"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "cleanup_t_address",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "1996:5:24",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "cleaned",
+                "nodeType": "YulTypedName",
+                "src": "2006:7:24",
+                "type": ""
+              }
+            ],
+            "src": "1969:96:24"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "2141:51:24",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "2151:35:24",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "value",
+                        "nodeType": "YulIdentifier",
+                        "src": "2180:5:24"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "cleanup_t_address",
+                      "nodeType": "YulIdentifier",
+                      "src": "2162:17:24"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "2162:24:24"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "cleaned",
+                      "nodeType": "YulIdentifier",
+                      "src": "2151:7:24"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "cleanup_t_contract$_IERC20Upgradeable_$696",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "2123:5:24",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "cleaned",
+                "nodeType": "YulTypedName",
+                "src": "2133:7:24",
+                "type": ""
+              }
+            ],
+            "src": "2071:121:24"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "2243:81:24",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "2253:65:24",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "value",
+                        "nodeType": "YulIdentifier",
+                        "src": "2268:5:24"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "2275:42:24",
+                        "type": "",
+                        "value": "0xffffffffffffffffffffffffffffffffffffffff"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "and",
+                      "nodeType": "YulIdentifier",
+                      "src": "2264:3:24"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "2264:54:24"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "cleaned",
+                      "nodeType": "YulIdentifier",
+                      "src": "2253:7:24"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "cleanup_t_uint160",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "2225:5:24",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "cleaned",
+                "nodeType": "YulTypedName",
+                "src": "2235:7:24",
+                "type": ""
+              }
+            ],
+            "src": "2198:126:24"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "2415:91:24",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "2425:75:24",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "value",
+                        "nodeType": "YulIdentifier",
+                        "src": "2494:5:24"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "convert_t_contract$_IERC20Upgradeable_$696_to_t_uint160",
+                      "nodeType": "YulIdentifier",
+                      "src": "2438:55:24"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "2438:62:24"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "converted",
+                      "nodeType": "YulIdentifier",
+                      "src": "2425:9:24"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "convert_t_contract$_IERC20Upgradeable_$696_to_t_address",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "2395:5:24",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "converted",
+                "nodeType": "YulTypedName",
+                "src": "2405:9:24",
+                "type": ""
+              }
+            ],
+            "src": "2330:176:24"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "2597:53:24",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "2607:37:24",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "value",
+                        "nodeType": "YulIdentifier",
+                        "src": "2638:5:24"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "cleanup_t_uint160",
+                      "nodeType": "YulIdentifier",
+                      "src": "2620:17:24"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "2620:24:24"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "converted",
+                      "nodeType": "YulIdentifier",
+                      "src": "2607:9:24"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "convert_t_contract$_IERC20Upgradeable_$696_to_t_uint160",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "2577:5:24",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "converted",
+                "nodeType": "YulTypedName",
+                "src": "2587:9:24",
+                "type": ""
+              }
+            ],
+            "src": "2512:138:24"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "2724:104:24",
+              "statements": [
+                {
+                  "body": {
+                    "nodeType": "YulBlock",
+                    "src": "2806:16:24",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "kind": "number",
+                              "nodeType": "YulLiteral",
+                              "src": "2815:1:24",
+                              "type": "",
+                              "value": "0"
+                            },
+                            {
+                              "kind": "number",
+                              "nodeType": "YulLiteral",
+                              "src": "2818:1:24",
+                              "type": "",
+                              "value": "0"
+                            }
+                          ],
+                          "functionName": {
+                            "name": "revert",
+                            "nodeType": "YulIdentifier",
+                            "src": "2808:6:24"
+                          },
+                          "nodeType": "YulFunctionCall",
+                          "src": "2808:12:24"
+                        },
+                        "nodeType": "YulExpressionStatement",
+                        "src": "2808:12:24"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "name": "value",
+                            "nodeType": "YulIdentifier",
+                            "src": "2747:5:24"
+                          },
+                          {
+                            "arguments": [
+                              {
+                                "name": "value",
+                                "nodeType": "YulIdentifier",
+                                "src": "2797:5:24"
+                              }
+                            ],
+                            "functionName": {
+                              "name": "cleanup_t_contract$_IERC20Upgradeable_$696",
+                              "nodeType": "YulIdentifier",
+                              "src": "2754:42:24"
+                            },
+                            "nodeType": "YulFunctionCall",
+                            "src": "2754:49:24"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "eq",
+                          "nodeType": "YulIdentifier",
+                          "src": "2744:2:24"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "2744:60:24"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "iszero",
+                      "nodeType": "YulIdentifier",
+                      "src": "2737:6:24"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "2737:68:24"
+                  },
+                  "nodeType": "YulIf",
+                  "src": "2734:2:24"
+                }
+              ]
+            },
+            "name": "validator_revert_t_contract$_IERC20Upgradeable_$696",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "2717:5:24",
+                "type": ""
+              }
+            ],
+            "src": "2656:172:24"
+          }
+        ]
+      },
+      "contents": "{\n\n    function abi_decode_t_contract$_IERC20Upgradeable_$696(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_contract$_IERC20Upgradeable_$696(value)\n    }\n\n    function abi_decode_tuple_t_contract$_IERC20Upgradeable_$696(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_contract$_IERC20Upgradeable_$696(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_encode_t_contract$_IERC20Upgradeable_$696_to_t_address_fromStack(value, pos) {\n        mstore(pos, convert_t_contract$_IERC20Upgradeable_$696_to_t_address(value))\n    }\n\n    function abi_encode_t_stringliteral_7a2a4e26842155ea933fe6eb6e3137eb5a296dcdf55721c552be7b4c3cc23759_to_t_string_memory_ptr_fromStack(pos) -> end {\n        pos := array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, 46)\n\n        mstore(add(pos, 0), \"Initializable: contract is alrea\")\n\n        mstore(add(pos, 32), \"dy initialized\")\n\n        end := add(pos, 64)\n    }\n\n    function abi_encode_tuple_t_contract$_IERC20Upgradeable_$696__to_t_address__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_contract$_IERC20Upgradeable_$696_to_t_address_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function abi_encode_tuple_t_stringliteral_7a2a4e26842155ea933fe6eb6e3137eb5a296dcdf55721c552be7b4c3cc23759__to_t_string_memory_ptr__fromStack_reversed(headStart ) -> tail {\n        tail := add(headStart, 32)\n\n        mstore(add(headStart, 0), sub(tail, headStart))\n        tail := abi_encode_t_stringliteral_7a2a4e26842155ea933fe6eb6e3137eb5a296dcdf55721c552be7b4c3cc23759_to_t_string_memory_ptr_fromStack( tail)\n\n    }\n\n    function array_storeLengthForEncoding_t_string_memory_ptr_fromStack(pos, length) -> updated_pos {\n        mstore(pos, length)\n        updated_pos := add(pos, 0x20)\n    }\n\n    function cleanup_t_address(value) -> cleaned {\n        cleaned := cleanup_t_uint160(value)\n    }\n\n    function cleanup_t_contract$_IERC20Upgradeable_$696(value) -> cleaned {\n        cleaned := cleanup_t_address(value)\n    }\n\n    function cleanup_t_uint160(value) -> cleaned {\n        cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n    }\n\n    function convert_t_contract$_IERC20Upgradeable_$696_to_t_address(value) -> converted {\n        converted := convert_t_contract$_IERC20Upgradeable_$696_to_t_uint160(value)\n    }\n\n    function convert_t_contract$_IERC20Upgradeable_$696_to_t_uint160(value) -> converted {\n        converted := cleanup_t_uint160(value)\n    }\n\n    function validator_revert_t_contract$_IERC20Upgradeable_$696(value) {\n        if iszero(eq(value, cleanup_t_contract$_IERC20Upgradeable_$696(value))) { revert(0, 0) }\n    }\n\n}\n",
+      "id": 24,
+      "language": "Yul",
+      "name": "#utility.yul"
+    }
+  ],
+  "sourceMap": "220:195:22:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "220:195:22:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;314:98;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;275:30;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;314:98;1409:13:0;;;;;;;;;;;:30;;;;1427:12;;;;;;;;;;1426:13;1409:30;1401:89;;;;;;;;;;;;:::i;:::-;;;;;;;;;1501:19;1524:13;;;;;;;;;;;1523:14;1501:36;;1551:14;1547:98;;;1597:4;1581:13;;:20;;;;;;;;;;;;;;;;;;1630:4;1615:12;;:19;;;;;;;;;;;;;;;;;;1547:98;398:6:22::1;390:5;;:14;;;;;;;;;;;;;;;;;;1671::0::0;1667:66;;;1717:5;1701:13;;:21;;;;;;;;;;;;;;;;;;1667:66;314:98:22;;:::o;275:30::-;;;;;;;;;;;;;:::o;7:189:24:-;;116:6;103:20;94:29;;132:58;184:5;132:58;:::i;:::-;84:112;;;;:::o;202:312::-;;335:2;323:9;314:7;310:23;306:32;303:2;;;351:1;348;341:12;303:2;394:1;419:78;489:7;480:6;469:9;465:22;419:78;:::i;:::-;409:88;;365:142;293:221;;;;:::o;520:181::-;632:62;688:5;632:62;:::i;:::-;627:3;620:75;610:91;;:::o;707:378::-;;870:67;934:2;929:3;870:67;:::i;:::-;863:74;;967:34;963:1;958:3;954:11;947:55;1033:16;1028:2;1023:3;1019:12;1012:38;1076:2;1071:3;1067:12;1060:19;;853:232;;;:::o;1091:272::-;;1247:2;1236:9;1232:18;1224:26;;1260:96;1353:1;1342:9;1338:17;1329:6;1260:96;:::i;:::-;1214:149;;;;:::o;1369:419::-;;1573:2;1562:9;1558:18;1550:26;;1622:9;1616:4;1612:20;1608:1;1597:9;1593:17;1586:47;1650:131;1776:4;1650:131;:::i;:::-;1642:139;;1540:248;;;:::o;1794:169::-;;1912:6;1907:3;1900:19;1952:4;1947:3;1943:14;1928:29;;1890:73;;;;:::o;1969:96::-;;2035:24;2053:5;2035:24;:::i;:::-;2024:35;;2014:51;;;:::o;2071:121::-;;2162:24;2180:5;2162:24;:::i;:::-;2151:35;;2141:51;;;:::o;2198:126::-;;2275:42;2268:5;2264:54;2253:65;;2243:81;;;:::o;2330:176::-;;2438:62;2494:5;2438:62;:::i;:::-;2425:75;;2415:91;;;:::o;2512:138::-;;2620:24;2638:5;2620:24;:::i;:::-;2607:37;;2597:53;;;:::o;2656:172::-;2754:49;2797:5;2754:49;:::i;:::-;2747:5;2744:60;2734:2;;2818:1;2815;2808:12;2734:2;2724:104;:::o",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\nimport '@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol';\r\nimport '@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol';\r\n\r\ncontract MyUpgradeableContract is Initializable {\r\n    IERC20Upgradeable public token;\r\n\r\n    function initialize(IERC20Upgradeable _token) public initializer {\r\n        token = _token;\r\n    }\r\n}\r\n",
+  "sourcePath": "C:\\Users\\Owner\\Dropbox\\general\\dev\\web\\projects\\100 - blockchain\\Second blockchain project\\s06-tokenisation\\contracts\\MyUpgradeableContract.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/MyUpgradeableContract.sol",
+    "exportedSymbols": {
+      "IERC20Upgradeable": [
+        696
+      ],
+      "Initializable": [
+        45
+      ],
+      "MyUpgradeableContract": [
+        3297
+      ]
+    },
+    "id": 3298,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3276,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:22"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "file": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "id": 3277,
+        "nodeType": "ImportDirective",
+        "scope": 3298,
+        "sourceUnit": 46,
+        "src": "60:75:22",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol",
+        "file": "@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol",
+        "id": 3278,
+        "nodeType": "ImportDirective",
+        "scope": 3298,
+        "sourceUnit": 697,
+        "src": "137:79:22",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 3279,
+              "name": "Initializable",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 45,
+              "src": "254:13:22"
+            },
+            "id": 3280,
+            "nodeType": "InheritanceSpecifier",
+            "src": "254:13:22"
+          }
+        ],
+        "contractDependencies": [
+          45
+        ],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 3297,
+        "linearizedBaseContracts": [
+          3297,
+          45
+        ],
+        "name": "MyUpgradeableContract",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "fc0c546a",
+            "id": 3283,
+            "mutability": "mutable",
+            "name": "token",
+            "nodeType": "VariableDeclaration",
+            "scope": 3297,
+            "src": "275:30:22",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IERC20Upgradeable_$696",
+              "typeString": "contract IERC20Upgradeable"
+            },
+            "typeName": {
+              "id": 3282,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 3281,
+                "name": "IERC20Upgradeable",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 696,
+                "src": "275:17:22"
+              },
+              "referencedDeclaration": 696,
+              "src": "275:17:22",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC20Upgradeable_$696",
+                "typeString": "contract IERC20Upgradeable"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 3295,
+              "nodeType": "Block",
+              "src": "379:33:22",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 3293,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 3291,
+                      "name": "token",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3283,
+                      "src": "390:5:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20Upgradeable_$696",
+                        "typeString": "contract IERC20Upgradeable"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 3292,
+                      "name": "_token",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3286,
+                      "src": "398:6:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20Upgradeable_$696",
+                        "typeString": "contract IERC20Upgradeable"
+                      }
+                    },
+                    "src": "390:14:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20Upgradeable_$696",
+                      "typeString": "contract IERC20Upgradeable"
+                    }
+                  },
+                  "id": 3294,
+                  "nodeType": "ExpressionStatement",
+                  "src": "390:14:22"
+                }
+              ]
+            },
+            "functionSelector": "c4d66de8",
+            "id": 3296,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 3289,
+                "modifierName": {
+                  "id": 3288,
+                  "name": "initializer",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 44,
+                  "src": "367:11:22"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "367:11:22"
+              }
+            ],
+            "name": "initialize",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3287,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3286,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3296,
+                  "src": "334:24:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20Upgradeable_$696",
+                    "typeString": "contract IERC20Upgradeable"
+                  },
+                  "typeName": {
+                    "id": 3285,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 3284,
+                      "name": "IERC20Upgradeable",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 696,
+                      "src": "334:17:22"
+                    },
+                    "referencedDeclaration": 696,
+                    "src": "334:17:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20Upgradeable_$696",
+                      "typeString": "contract IERC20Upgradeable"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "333:26:22"
+            },
+            "returnParameters": {
+              "id": 3290,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "379:0:22"
+            },
+            "scope": 3297,
+            "src": "314:98:22",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 3298,
+        "src": "220:195:22"
+      }
+    ],
+    "src": "33:384:22"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/MyUpgradeableContract.sol",
+    "exportedSymbols": {
+      "IERC20Upgradeable": [
+        696
+      ],
+      "Initializable": [
+        45
+      ],
+      "MyUpgradeableContract": [
+        3297
+      ]
+    },
+    "id": 3298,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3276,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:22"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "file": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "id": 3277,
+        "nodeType": "ImportDirective",
+        "scope": 3298,
+        "sourceUnit": 46,
+        "src": "60:75:22",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol",
+        "file": "@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol",
+        "id": 3278,
+        "nodeType": "ImportDirective",
+        "scope": 3298,
+        "sourceUnit": 697,
+        "src": "137:79:22",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 3279,
+              "name": "Initializable",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 45,
+              "src": "254:13:22"
+            },
+            "id": 3280,
+            "nodeType": "InheritanceSpecifier",
+            "src": "254:13:22"
+          }
+        ],
+        "contractDependencies": [
+          45
+        ],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 3297,
+        "linearizedBaseContracts": [
+          3297,
+          45
+        ],
+        "name": "MyUpgradeableContract",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "fc0c546a",
+            "id": 3283,
+            "mutability": "mutable",
+            "name": "token",
+            "nodeType": "VariableDeclaration",
+            "scope": 3297,
+            "src": "275:30:22",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IERC20Upgradeable_$696",
+              "typeString": "contract IERC20Upgradeable"
+            },
+            "typeName": {
+              "id": 3282,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 3281,
+                "name": "IERC20Upgradeable",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 696,
+                "src": "275:17:22"
+              },
+              "referencedDeclaration": 696,
+              "src": "275:17:22",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC20Upgradeable_$696",
+                "typeString": "contract IERC20Upgradeable"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 3295,
+              "nodeType": "Block",
+              "src": "379:33:22",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 3293,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 3291,
+                      "name": "token",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3283,
+                      "src": "390:5:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20Upgradeable_$696",
+                        "typeString": "contract IERC20Upgradeable"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 3292,
+                      "name": "_token",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3286,
+                      "src": "398:6:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20Upgradeable_$696",
+                        "typeString": "contract IERC20Upgradeable"
+                      }
+                    },
+                    "src": "390:14:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20Upgradeable_$696",
+                      "typeString": "contract IERC20Upgradeable"
+                    }
+                  },
+                  "id": 3294,
+                  "nodeType": "ExpressionStatement",
+                  "src": "390:14:22"
+                }
+              ]
+            },
+            "functionSelector": "c4d66de8",
+            "id": 3296,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 3289,
+                "modifierName": {
+                  "id": 3288,
+                  "name": "initializer",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 44,
+                  "src": "367:11:22"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "367:11:22"
+              }
+            ],
+            "name": "initialize",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3287,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3286,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3296,
+                  "src": "334:24:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20Upgradeable_$696",
+                    "typeString": "contract IERC20Upgradeable"
+                  },
+                  "typeName": {
+                    "id": 3285,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 3284,
+                      "name": "IERC20Upgradeable",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 696,
+                      "src": "334:17:22"
+                    },
+                    "referencedDeclaration": 696,
+                    "src": "334:17:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20Upgradeable_$696",
+                      "typeString": "contract IERC20Upgradeable"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "333:26:22"
+            },
+            "returnParameters": {
+              "id": 3290,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "379:0:22"
+            },
+            "scope": 3297,
+            "src": "314:98:22",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 3298,
+        "src": "220:195:22"
+      }
+    ],
+    "src": "33:384:22"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.0+commit.c7dfd78e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.2",
+  "updatedAt": "2021-09-23T13:28:54.966Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

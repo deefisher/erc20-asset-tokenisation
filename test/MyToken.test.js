@@ -1,6 +1,5 @@
 const Token = artifacts.require('MyToken');
-
-const { BN, expect } = require('./testSetup');
+const tokenTestAssertions = require('./tokenTestAssertions');
 
 contract('Token Test', async (accounts) => {
     const [deployerAccount, recipient] = accounts;
@@ -12,31 +11,18 @@ contract('Token Test', async (accounts) => {
 
     //eventually property is needed to allow for promises to resolve
     it('should have all tokens in my account', async () => {
-        let instance = await this.myToken;
-        let totalSupply = await instance.totalSupply();
-        await expect(instance.balanceOf(deployerAccount)).to.eventually.be.a.bignumber.equal(totalSupply);
+        await tokenTestAssertions.assertAllTokensInDeployerAccount({ token: this.myToken, deployerAccount });
     });
 
     it('is possible to send tokens between accounts', async () => {
-        const sendTokens = 1;
-        let instance = await this.myToken;
-        let totalSupply = await instance.totalSupply();
-        await expect(instance.balanceOf(deployerAccount)).to.eventually.be.a.bignumber.equal(totalSupply);
-        //fulfilled property means promise gets fulfilled (as opposed to rejected)
-        //is erc20 instance therefore can use balanceOf method
-        await expect(instance.transfer(recipient, sendTokens)).to.eventually.be.fulfilled;
-        await expect(instance.balanceOf(deployerAccount)).to.eventually.be.a.bignumber.equal(
-            totalSupply.sub(new BN(sendTokens)),
-        );
-        await expect(instance.balanceOf(recipient)).to.eventually.be.a.bignumber.equal(new BN(sendTokens));
+        await tokenTestAssertions.assertSendTokensBetweenAccounts({ token: this.myToken, deployerAccount, recipient });
     });
 
     it('is not possible to send more tokens than available in total', async () => {
-        let instance = await this.myToken;
-        let balanceOfDeployer = await instance.balanceOf(deployerAccount);
-
-        await expect(instance.transfer(recipient, new BN(balanceOfDeployer + 1))).to.eventually.be.rejected;
-
-        await expect(instance.balanceOf(deployerAccount)).to.eventually.be.a.bignumber.equal(balanceOfDeployer);
+        await tokenTestAssertions.assertNotPossibleToSendMoreTokensThanAvailable({
+            token: this.myToken,
+            deployerAccount,
+            recipient,
+        });
     });
 });
