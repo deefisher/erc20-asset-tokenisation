@@ -1,31 +1,33 @@
-const Token = artifacts.require('MyToken');
+const UpgradeableToken = artifacts.require('MyUpgradeableToken');
 const { args } = require('../utils/projectVariables');
 const tokenTestAssertions = require('./tokenTestAssertions');
 
-contract('Token Test', async (accounts) => {
+contract('UpgradeableToken Test', async (accounts) => {
     const [deployerAccount, recipient] = accounts;
-
-    beforeEach(async () => {
-        this.myToken = await Token.new(...Object.values(args.tokenInstance));
-        await web3.eth.getBalance(deployerAccount).then(console.log);
-    });
 
     //eventually property is needed to allow for promises to resolve
     it('should have all tokens in my account', async () => {
+        const UpgradeableTokenInstance = UpgradeableToken.deployed();
         await tokenTestAssertions.assertAllTokensInDeployerAccount({
-            token: this.myToken,
+            token: UpgradeableTokenInstance,
             deployerAccount,
-            initialSupply: args.tokenInstance.initialSupply,
+            initialSupply: args.upgradeableTokenInstance.initialSupply,
         });
     });
 
     it('is possible to send tokens between accounts', async () => {
-        await tokenTestAssertions.assertSendTokensBetweenAccounts({ token: this.myToken, deployerAccount, recipient });
+        const UpgradeableTokenInstance = UpgradeableToken.deployed();
+        await tokenTestAssertions.assertSendTokensBetweenAccounts({
+            token: UpgradeableTokenInstance,
+            deployerAccount,
+            recipient,
+        });
     });
 
     it('is not possible to send more tokens than available in total', async () => {
+        const UpgradeableTokenInstance = UpgradeableToken.deployed();
         await tokenTestAssertions.assertNotPossibleToSendMoreTokensThanAvailable({
-            token: this.myToken,
+            token: UpgradeableTokenInstance,
             deployerAccount,
             recipient,
         });

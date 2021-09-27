@@ -5,7 +5,11 @@ import '@openzeppelin/contracts/token/ERC20/ERC20.sol';
 
 //person who creates smart contract recieves the initialSupply of tokens
 contract MyToken is ERC20 {
-    constructor(uint256 initialSupply) ERC20('StarDucks Capu-Token', 'SCT') {
+    constructor(
+        string memory name,
+        string memory symbol,
+        uint256 initialSupply
+    ) ERC20(name, symbol) {
         _mint(msg.sender, initialSupply);
     }
 
