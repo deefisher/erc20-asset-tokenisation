@@ -6,12 +6,9 @@ contract('UpgradeableToken Test', async (accounts) => {
     const [deployerAccount, recipient] = accounts;
     let UpgradeableTokenInstance;
 
-    beforeEach(() => {
-        UpgradeableTokenInstance = UpgradeableToken.deployed();
-    });
-
     //eventually property is needed to allow for promises to resolve
     it('should have all tokens in my account', async () => {
+        UpgradeableTokenInstance = await UpgradeableToken.deployed();
         await tokenTestAssertions.assertAllTokensInDeployerAccount({
             token: UpgradeableTokenInstance,
             deployerAccount,
@@ -20,6 +17,7 @@ contract('UpgradeableToken Test', async (accounts) => {
     });
 
     it('is possible to send tokens between accounts', async () => {
+        UpgradeableTokenInstance = await UpgradeableToken.deployed();
         await tokenTestAssertions.assertSendTokensBetweenAccounts({
             token: UpgradeableTokenInstance,
             deployerAccount,
@@ -28,6 +26,7 @@ contract('UpgradeableToken Test', async (accounts) => {
     });
 
     it('is not possible to send more tokens than available in total', async () => {
+        UpgradeableTokenInstance = await UpgradeableToken.deployed();
         await tokenTestAssertions.assertNotPossibleToSendMoreTokensThanAvailable({
             token: UpgradeableTokenInstance,
             deployerAccount,
