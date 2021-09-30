@@ -17,7 +17,7 @@ module.exports = async function (deployer) {
     let nftInstance = await deployer.deploy(MyNFT);
     await nftInstance.awardItem(addr[0], process.env.NFT_TOKEN_URI);
 
-    //deploy the upgradeable token contacts
+    //deploy the upgradeable token contracts
     await deployProxy(MyUpgradeableToken, [...Object.values(args.upgradeableTokenInstance)], {
         deployer,
         initializer: 'initialize',

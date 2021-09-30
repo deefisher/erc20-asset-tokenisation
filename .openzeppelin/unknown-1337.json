@@ -9,11 +9,6 @@
       "address": "0x2c966994fbfC49E3e23E583d9cb11C7c9005924F",
       "txHash": "0x530e09d1b1b1efc96fdeea21f5514a67c7ad0e4877c8c041a08f078313e69edc",
       "kind": "transparent"
-    },
-    {
-      "address": "0x0d8CdCbbE191E2AFDD29539B18f09Aa74501F822",
-      "txHash": "0xc94625e0517b14bee3d379a989edd57bc209690082b0578cb7d46b157788153a",
-      "kind": "transparent"
     }
   ],
   "impls": {
@@ -105,9 +100,9 @@
         }
       }
     },
-    "8a8285561df8980960e12bca222c63c0c8466eab191debf11765ed10235bf36d": {
+    "b2a18a89e3792f24c5e7e850905e5c76f6813d29f6fbfa098a09b581a4a20c28": {
       "address": "0x5fBA8D13d6F34C4c9E0b5efD36c49e5F7d1d4f3F",
-      "txHash": "0x3d373d6c755e675ec807efdbbb060e022f00779052ae9eea708edb83b4ac0657",
+      "txHash": "0x055067bb0e193ba6f2040bcaa0ef437e2fec5817515dcbb67282f24435f556b7",
       "layout": {
         "storage": [
           {
@@ -145,11 +140,20 @@
             "label": "token",
             "type": "t_contract(IERC20Upgradeable)821",
             "src": "..\\project:\\contracts\\MyUpgradeableContract.sol:9"
+          },
+          {
+            "contract": "MyUpgradeableContract",
+            "label": "value",
+            "type": "t_uint8",
+            "src": "..\\project:\\contracts\\MyUpgradeableContract.sol:10"
           }
         ],
         "types": {
           "t_contract(IERC20Upgradeable)821": {
             "label": "contract IERC20Upgradeable"
+          },
+          "t_uint8": {
+            "label": "uint8"
           },
           "t_address": {
             "label": "address"
