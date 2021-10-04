@@ -18,12 +18,12 @@ module.exports = async function (deployer) {
     await nftInstance.awardItem(addr[0], process.env.NFT_TOKEN_URI);
 
     //deploy the upgradeable token contracts
-    await deployProxy(MyUpgradeableToken, [...Object.values(args.upgradeableTokenInstance)], {
-        deployer,
-        initializer: 'initialize',
-    });
-    await deployProxy(MyUpgradeableContract, [MyUpgradeableToken.address], {
-        deployer,
-        initializer: 'initialize',
-    });
+    // await deployProxy(MyUpgradeableToken, [...Object.values(args.upgradeableTokenInstance)], {
+    //     deployer,
+    //     initializer: 'initialize',
+    // });
+    // await deployProxy(MyUpgradeableContract, [MyUpgradeableToken.address], {
+    //     deployer,
+    //     initializer: 'initialize',
+    // });
 };
