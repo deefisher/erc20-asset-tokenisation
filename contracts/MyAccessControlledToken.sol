@@ -9,7 +9,7 @@ contract MyAccessControlledToken is ERC20, AccessControl {
     bytes32 public constant MINTER_ROLE = keccak256('MINTER_ROLE');
     bytes32 public constant BURNER_ROLE = keccak256('BURNER_ROLE');
 
-    constructor() ERC20('MyToken', 'TKN') {
+    constructor(string memory name, string memory symbol) ERC20(name, symbol) {
         // Grant the contract deployer the default admin role: it will be able
         // to grant and revoke any roles
         _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);

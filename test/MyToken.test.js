@@ -1,6 +1,7 @@
 const Token = artifacts.require('MyToken');
 const { args } = require('../utils/projectVariables');
 const tokenTestAssertions = require('./tokenTestAssertions');
+const { expect } = require('./testSetup');
 
 contract('Token Test', async (accounts) => {
     const [deployerAccount, recipient] = accounts;
@@ -29,5 +30,19 @@ contract('Token Test', async (accounts) => {
             deployerAccount,
             recipient,
         });
+    });
+
+    it('is possible for owner to call incrementValue', async () => {
+        let instance = await this.myToken;
+        let value = await instance.value();
+        await expect(value.toString()).to.equal('42');
+        await expect(instance.incrementValue()).to.eventually.be.fulfilled;
+        value = await instance.value();
+        await expect(value.toString()).to.equal('43');
+    });
+
+    it('is not possible for other accounts to call incrementValue', async () => {
+        let instance = await this.myToken;
+        await expect(instance.incrementValue({ from: accounts[1] })).to.eventually.be.rejected;
     });
 });

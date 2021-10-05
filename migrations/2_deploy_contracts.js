@@ -2,6 +2,7 @@ const MyToken = artifacts.require('./MyToken.sol');
 const MyNFT = artifacts.require('./MyNFT.sol');
 const MyUpgradeableToken = artifacts.require('./MyUpgradeableToken.sol');
 const MyUpgradeableContract = artifacts.require('./MyUpgradeableContract.sol');
+const MyAccessControlledToken = artifacts.require('./MyAccessControlledToken.sol');
 const { deployProxy } = require('@openzeppelin/truffle-upgrades');
 const { args } = require('../utils/projectVariables');
 
@@ -26,4 +27,7 @@ module.exports = async function (deployer) {
     //     deployer,
     //     initializer: 'initialize',
     // });
+
+    //deploy the token contract
+    await deployer.deploy(MyAccessControlledToken, ...Object.values(args.accessControlledTokenInstance));
 };

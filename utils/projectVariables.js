@@ -4,6 +4,10 @@ const args = {
         symbol: 'SCT',
         initialSupply: process.env.INITIAL_TOKENS,
     },
+    accessControlledTokenInstance: {
+        name: 'StarDucks Access Capu-Token',
+        symbol: 'SACT',
+    },
     upgradeableTokenInstance: {
         name: 'StarDucks Capu-Token Upgradeable',
         symbol: 'SCTUPG',
