@@ -45,12 +45,18 @@ module.exports = {
             },
             network_id: 3,
             networkCheckTimeout: 10000000,
-            timeoutBlocks: 20000
+            timeoutBlocks: 20000,
         },
     },
     compilers: {
         solc: {
-            version: '0.8.0',
+            version: '0.8.2',
+            settings: {
+                optimizer: {
+                    enabled: true,
+                    runs: 1337,
+                },
+            },
         },
     },
 };

@@ -14,6 +14,10 @@ const args = {
         initialSupply: process.env.INITIAL_TOKENS,
         decimals: 0,
     },
+    votingTokenInstance: {
+        name: 'Cryptapp utility token',
+        symbol: 'ctap',
+    },
 };
 
 module.exports = {

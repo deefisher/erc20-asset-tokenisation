@@ -1,10 +1,13 @@
 const MyToken = artifacts.require('./MyToken.sol');
 const MyNFT = artifacts.require('./MyNFT.sol');
-const MyUpgradeableToken = artifacts.require('./MyUpgradeableToken.sol');
-const MyUpgradeableContract = artifacts.require('./MyUpgradeableContract.sol');
 const MyAccessControlledToken = artifacts.require('./MyAccessControlledToken.sol');
-const { deployProxy } = require('@openzeppelin/truffle-upgrades');
+const MyTimelockController = artifacts.require('./MyTimelockController.sol');
+const MyGovernerContract = artifacts.require('./MyGovernerContract.sol');
+const MyVotingToken = artifacts.require('./MyVotingToken.sol');
 const { args } = require('../utils/projectVariables');
+//const MyUpgradeableToken = artifacts.require('./MyUpgradeableToken.sol');
+//const MyUpgradeableContract = artifacts.require('./MyUpgradeableContract.sol');
+//const { deployProxy } = require('@openzeppelin/truffle-upgrades');
 
 require('dotenv').config({ path: '../.env' });
 
@@ -30,4 +33,9 @@ module.exports = async function (deployer) {
 
     //deploy the token contract
     await deployer.deploy(MyAccessControlledToken, ...Object.values(args.accessControlledTokenInstance));
+
+    //deploy governer contracts
+    await deployer.deploy(MyTimelockController, [1, [addr[0]], [addr[0]]]);
+    await deployer.deploy(MyVotingToken, ...Object.values(args.votingTokenInstance));
+    await deployer.deploy(MyGovernerContract, [MyVotingToken, MyTimelockController.address]);
 };
