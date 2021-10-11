@@ -35,7 +35,7 @@ module.exports = async function (deployer) {
     await deployer.deploy(MyAccessControlledToken, ...Object.values(args.accessControlledTokenInstance));
 
     //deploy governer contracts
-    await deployer.deploy(MyTimelockController, [1, [addr[0]], [addr[0]]]);
+    await deployer.deploy(MyTimelockController, 1, [addr[0]], [addr[0]]);
     await deployer.deploy(MyVotingToken, ...Object.values(args.votingTokenInstance));
-    await deployer.deploy(MyGovernerContract, [MyVotingToken, MyTimelockController.address]);
+    await deployer.deploy(MyGovernerContract, MyVotingToken.address, MyTimelockController.address);
 };
