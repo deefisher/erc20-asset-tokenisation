@@ -15,6 +15,11 @@ contract('GovernerContract Test', async (accounts) => {
     it('should allow the granting of the proposer role to the governer contract', async () => {
         const proposerRole = await timelockControllerInstance.PROPOSER_ROLE();
         await timelockControllerInstance.grantRole(proposerRole, governerContractInstance.address);
+        //there is an underlying web3 instance with truffle!
+        const data = await timelockControllerInstance.contract.methods
+            .grantRole(proposerRole, governerContractInstance.address)
+            .encodeABI();
+        console.log('data', data);
         const governerHasRole = await timelockControllerInstance.hasRole(
             proposerRole,
             governerContractInstance.address,
