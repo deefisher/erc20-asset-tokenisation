@@ -26,7 +26,7 @@ contract MyGovernerContract is
     }
 
     function votingPeriod() public pure override returns (uint256) {
-        return 270; //46027; // 1 week
+        return 20; //46027; // 1 week
     }
 
     function proposalThreshold() public pure override returns (uint256) {

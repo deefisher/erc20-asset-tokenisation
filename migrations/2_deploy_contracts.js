@@ -13,6 +13,7 @@ require('dotenv').config({ path: '../.env' });
 
 module.exports = async function (deployer) {
     let addr = await web3.eth.getAccounts();
+    console.log('addr', addr)
 
     //deploy the token contract
     await deployer.deploy(MyToken, ...Object.values(args.tokenInstance));
@@ -38,4 +39,5 @@ module.exports = async function (deployer) {
     await deployer.deploy(MyTimelockController, 1, [addr[0]], [addr[0]]);
     await deployer.deploy(MyVotingToken, ...Object.values(args.votingTokenInstance));
     await deployer.deploy(MyGovernerContract, MyVotingToken.address, MyTimelockController.address);
+
 };
